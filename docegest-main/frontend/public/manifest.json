@@ -1,0 +1,51 @@
+{
+  "short_name": "Segredo do Sabor",
+  "name": "Segredo do Sabor - Doces Artesanais",
+  "description": "Doces artesanais feitos com amor e ingredientes selecionados. Faça seu pedido online de forma rápida e fácil.",
+  "icons": [
+    {
+      "src": "imgs/logo_segredo_branca-removebg.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "imgs/logo_segredo_branca-removebg.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "imgs/logo_segredo_branca-removebg.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "categories": ["food", "shopping", "business"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Catálogo",
+      "short_name": "Catálogo",
+      "description": "Ver produtos disponíveis",
+      "url": "/catalogo",
+      "icons": [{ "src": "imgs/logo_segredo_branca-removebg.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Meus Pedidos",
+      "short_name": "Pedidos",
+      "description": "Acompanhar meus pedidos",
+      "url": "/meus-pedidos",
+      "icons": [{ "src": "imgs/logo_segredo_branca-removebg.png", "sizes": "96x96" }]
+    }
+  ]
+}

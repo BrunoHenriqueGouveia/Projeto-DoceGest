@@ -1,0 +1,244 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    gap: 30px;
+    height: auto;
+    min-height: 75px;
+
+    .logo-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        flex-shrink: 0;
+        
+        img, .logo {
+            max-height: 55px;
+            width: auto;
+        }
+    }
+
+    // Navegação Principal
+    .menu-nav {
+        display: flex;
+        gap: 35px;
+        align-items: center;
+        flex: 1;
+        justify-content: center;
+
+        .nav-link {
+            color: #41629f;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            position: relative;
+            white-space: nowrap;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #667eea;
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: #667eea;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // Ações do Usuário
+    .menu-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-shrink: 0;
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+
+            svg {
+                font-size: 16px;
+                flex-shrink: 0;
+            }
+
+            span {
+                font-size: 13px;
+            }
+
+            &.catalogo-btn {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+                }
+            }
+
+            &.favoritos-btn {
+                background: #fff5f8;
+                color: #e84393;
+                border: 2px solid #e84393;
+
+                &:hover {
+                    background: #e84393;
+                    color: white;
+                    transform: translateY(-2px);
+                }
+            }
+
+            &.pedidos-btn {
+                background: #f8f9ff;
+                color: #667eea;
+                border: 2px solid #667eea;
+
+                &:hover {
+                    background: #667eea;
+                    color: white;
+                    transform: translateY(-2px);
+                }
+            }
+
+            &.login-btn {
+                background: transparent;
+                color: #41629f;
+
+                &:hover {
+                    color: #667eea;
+                }
+            }
+        }
+    }
+
+    // Responsividade
+    @media (max-width: 1200px) {
+        padding: 15px 30px;
+        gap: 20px;
+
+        .menu-nav {
+            gap: 25px;
+
+            .nav-link {
+                font-size: 14px;
+            }
+        }
+
+        .menu-actions {
+            gap: 8px;
+
+            .action-btn {
+                padding: 9px 14px;
+                font-size: 12px;
+
+                span {
+                    font-size: 12px;
+                }
+
+                svg {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .menu-actions {
+            .action-btn {
+                padding: 8px 12px;
+
+                span {
+                    display: none;
+                }
+
+                svg {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        .logo-link {
+            order: 1;
+            
+            img, .logo {
+                max-height: 45px;
+            }
+        }
+
+        .menu-actions {
+            order: 2;
+            gap: 8px;
+        }
+
+        .menu-nav {
+            order: 3;
+            width: 100%;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e9ecff;
+
+            .nav-link {
+                font-size: 13px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 12px 15px;
+
+        .menu-nav {
+            gap: 10px;
+
+            .nav-link {
+                font-size: 12px;
+                padding: 5px 0;
+            }
+        }
+
+        .menu-actions {
+            gap: 6px;
+
+            .action-btn {
+                padding: 8px 10px;
+
+                svg {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
