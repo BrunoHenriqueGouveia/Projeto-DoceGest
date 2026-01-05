@@ -1,4 +1,5 @@
-<div align="center">
+<img width="694" height="240" alt="image" src="https://github.com/user-attachments/assets/4332152e-2601-4536-b78a-1c717142a147" />
+
 
 ![Logo DoceGest](./docegest-logo-nobg.png)
 
